@@ -1,3 +1,5 @@
+vim.o.autochdir = true
+vim.o.wrap = true
 -- utf8
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = "utf-8"
@@ -42,8 +44,6 @@ vim.o.autoread = true
 vim.bo.autoread = true
 -- 允许隐藏被修改过的buffer
 vim.o.hidden = true
--- 鼠标支持
-vim.o.mouse = "a"
 -- 禁止创建备份文件
 vim.o.backup = false
 vim.o.writebackup = false
@@ -74,6 +74,7 @@ vim.o.showtabline = 2
 vim.o.showmode = false
 -- 配置剪切板
 vim.opt.clipboard = "unnamedplus"
---vim.opt_local.suffixesadd:prepend('.lua')
---vim.opt_local.suffixesadd:prepend('init.lua')
--- vim.opt_local.path:prepend(vim.fn.stdpath('config')..'/lua')
+
+vim.opt_local.suffixesadd:prepend('.lua')
+vim.opt_local.suffixesadd:prepend('init.lua')
+vim.opt_local.path:prepend(vim.fn.stdpath('config')..'/lua')
