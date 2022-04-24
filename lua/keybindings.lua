@@ -13,7 +13,7 @@ local opt = {
   silent = true,
 }
 
-  local map = vim.api.nvim_set_keymap        
+local map = vim.api.nvim_set_keymap        
 
 
 map("n", "<leader>rc", ":edit $MYVIMRC<CR>", opt)
