@@ -40,7 +40,7 @@ end
 local list_keys = require("keybindings").nvimTreeList
 
 nvim_tree.setup({
---  open_on_setup = true,
+  open_on_setup = false,
   update_cwd = true,
   update_focused_file = {
     enable = true,
@@ -56,7 +56,6 @@ nvim_tree.setup({
     width = 30,
     side = "left",
     hide_root_folder = false,
-    auto_resize = true,
     mappings = {
       custom_only = true,
       list = list_keys,
@@ -71,7 +70,7 @@ nvim_tree.setup({
       -- 首次打开大小适配
       resize_window = true,
       -- 打开文件时关闭 tree
-      quit_on_open = false,
+      quit_on_open = true,
     },
   },
   -- wsl install -g wsl-open

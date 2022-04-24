@@ -16,9 +16,7 @@ local opt = {
 local map = vim.api.nvim_set_keymap        
 
 
-map("n", "<leader>rc", ":edit $MYVIMRC<CR>", opt)
-
-
+map("v", "Y", "\"+y", opt)
 -- 上下滚动浏览
 map("n", "<C-j>", "5j", opt)
 map("n", "<C-k>", "5k", opt)
@@ -28,7 +26,7 @@ map("n", "<C-k>", "5k", opt)
  map("v", "<", "<gv", opt)
  map("v", ">", ">gv", opt)
 
-map("n", "Q", ":qa!<CR>", opt)
+map("n", "Q", ":q<CR>", opt)
 map("n", "W", ":w<CR>", opt)
 
 
@@ -43,7 +41,6 @@ map("n", "sh", ":sp<CR>", opt)
 map("n", "sc", "<C-w>c", opt)
 -- 关闭其他
 map("n", "so", "<C-w>o", opt) -- close others
-
 
 
 
@@ -162,9 +159,9 @@ pluginKeys.mapLSP = function(mapbuf)
   mapbuf("n", "gh", "<cmd>Lspsaga hover_doc<cr>", opt)
   --[[
   Lspsaga 替换 gr
-  mapbuf("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opt)
-  --]]
   mapbuf("n", "gr", "<cmd>Lspsaga lsp_finder<CR>", opt)
+  --]]
+  mapbuf("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opt)
   --[[
   Lspsaga 替换 gp, gj, gk
   mapbuf("n", "gp", "<cmd>lua vim.diagnostic.open_float()<CR>", opt)
