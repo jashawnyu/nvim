@@ -37,6 +37,10 @@ packer.startup({
     -- Packer update itself
     use("wbthomason/packer.nvim")
     -------------------------- plugins -------------------------------------------
+    -- vimwiki
+    use({
+      "vimwiki/vimwiki"
+    })
     -- nvim-tree
     use({
       "kyazdani42/nvim-tree.lua",

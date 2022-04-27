@@ -13,9 +13,8 @@ local servers = {
 --  jsonls = require("lsp.config.json"),
 --  tsserver = require("lsp.config.ts"),
   pyright = require("lsp.config.pyright"),
-  clangd = require("lsp.config.clangd")
+  clangd = require("lsp.config.clangd"),
   -- rust_analyzer = require("lsp.lang.rust"),
-  -- remark_ls = require("lsp.lang.markdown"),
 }
 
 -- 自动安装 Language Servers
