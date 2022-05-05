@@ -129,9 +129,6 @@ pluginKeys.comment = {
     bock = "gb",
   },
 }
--- ctrl + /
-map("n", "<C-_>", "gcc", { noremap = false })
-map("v", "<C-_>", "gcc", { noremap = false })
 
 -- lsp 回调函数快捷键设置
 pluginKeys.mapLSP = function(mapbuf)
@@ -197,9 +194,9 @@ pluginKeys.cmp = function(cmp)
 
   return {
     -- 上一个
-    ["<C-k>"] = cmp.mapping.select_prev_item(),
+    ["<C-k>"] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),
     -- 下一个
-    ["<C-j>"] = cmp.mapping.select_next_item(),
+    ["<C-j>"] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
     -- 出现补全
     ["<A-.>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
     -- 取消

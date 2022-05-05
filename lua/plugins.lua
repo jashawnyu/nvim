@@ -37,6 +37,8 @@ packer.startup({
     -- Packer update itself
     use("wbthomason/packer.nvim")
     -------------------------- plugins -------------------------------------------
+    --image paste to markdown
+    use({ "ferrine/md-img-paste.vim" })
     -- vimwiki
     use({
       "vimwiki/vimwiki"

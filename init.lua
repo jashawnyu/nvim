@@ -14,7 +14,8 @@ require("plugin-cfg.surround")
 require("plugin-cfg.nvim-autopairs")
 require("plugin-cfg.comment")
 require("plugin-cfg.vimwiki")
- require("plugin-cfg.gitsigns")
+require("plugin-cfg.gitsigns")
+require("plugin-cfg.md-img-paste")
 
 -- LSP
 require("lsp.setup")
