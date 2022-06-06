@@ -16,6 +16,7 @@ require("plugin-cfg.comment")
 require("plugin-cfg.vimwiki")
 require("plugin-cfg.gitsigns")
 require("plugin-cfg.md-img-paste")
+require("plugin-cfg.markdown_preview")
 
 -- LSP
 require("lsp.setup")

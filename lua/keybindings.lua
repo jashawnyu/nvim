@@ -130,6 +130,9 @@ pluginKeys.comment = {
   },
 }
 
+-- markdown preview shortcut
+map('n', '<leader>m', '<cmd>MarkdownPreview<cr>', opt)
+
 -- lsp 回调函数快捷键设置
 pluginKeys.mapLSP = function(mapbuf)
   -- rename

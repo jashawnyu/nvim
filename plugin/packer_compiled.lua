@@ -149,6 +149,16 @@ _G.packer_plugins = {
     path = "/home/jashawnyu/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/home/jashawnyu/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
+  ["md-img-paste.vim"] = {
+    loaded = true,
+    path = "/home/jashawnyu/.local/share/nvim/site/pack/packer/start/md-img-paste.vim",
+    url = "https://github.com/ferrine/md-img-paste.vim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/jashawnyu/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
