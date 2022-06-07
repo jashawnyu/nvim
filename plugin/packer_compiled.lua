@@ -151,12 +151,12 @@ _G.packer_plugins = {
   },
   ["markdown-preview.nvim"] = {
     loaded = true,
-    path = "/home/jashawnyu/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    path = "/Users/yjx/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["md-img-paste.vim"] = {
     loaded = true,
-    path = "/home/jashawnyu/.local/share/nvim/site/pack/packer/start/md-img-paste.vim",
+    path = "/Users/yjx/.local/share/nvim/site/pack/packer/start/md-img-paste.vim",
     url = "https://github.com/ferrine/md-img-paste.vim"
   },
   ["nvim-autopairs"] = {
@@ -226,7 +226,7 @@ _G.packer_plugins = {
   },
   vimwiki = {
     loaded = true,
-    path = "/home/jashawnyu/.local/share/nvim/site/pack/packer/start/vimwiki",
+    path = "/Users/yjx/.local/share/nvim/site/pack/packer/start/vimwiki",
     url = "https://github.com/vimwiki/vimwiki"
   }
 }
