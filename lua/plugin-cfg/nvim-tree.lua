@@ -1,35 +1,7 @@
 -- https://github.com/kyazdani42/nvim-tree.lua
 -- local nvim_tree = require'nvim-tree'
 
-local nvim_tree_icons = {
-  default = "",
-  symlink = "",
-  git = {
-    unstaged = "",
-    staged = "S",
-    unmerged = "",
-    renamed = "➜",
-    deleted = "",
-    untracked = "U",
-    ignored = "◌",
-  },
-  folder = {
-    default = "",
-    open = "",
-    empty = "",
-    empty_open = "",
-    symlink = "",
-  },
-}
 
-nvim_tree_show_icons = {
-    git = 1,
-    folders = 1,
-    files = 1,
-    folder_arrows= 1
-}
-vim.api.nvim_set_var("nvim_tree_icons", nvim_tree_icons)
-vim.api.nvim_set_var("nvim_tree_show_icons", nvim_tree_show_icons)
 
 local status, nvim_tree = pcall(require, "nvim-tree")
 if not status then
@@ -42,6 +14,31 @@ local list_keys = require("keybindings").nvimTreeList
 nvim_tree.setup({
   open_on_setup = false,
   update_cwd = true,
+  renderer = {
+    icons = {
+      glyphs = {
+        default = "",
+        symlink = "",
+        git = {
+          unstaged = "",
+          staged = "S",
+          unmerged = "",
+          renamed = "➜",
+          deleted = "",
+          untracked = "U",
+          ignored = "◌",
+        },
+        folder = {
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+        },
+      },
+    }
+  },
+
   update_focused_file = {
     enable = true,
     update_cwd = true,
