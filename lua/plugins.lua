@@ -37,6 +37,17 @@ packer.startup({
     -- Packer update itself
     use("wbthomason/packer.nvim")
     -------------------------- plugins -------------------------------------------
+    --markdown preview
+    use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+    })
+    --image paste to markdown
+    use({ "ferrine/md-img-paste.vim" })
+    -- vimwiki
+    use({
+      "vimwiki/vimwiki"
+    })
     -- nvim-tree
     use({
       "kyazdani42/nvim-tree.lua",

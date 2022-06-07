@@ -129,9 +129,9 @@ pluginKeys.comment = {
     bock = "gb",
   },
 }
--- ctrl + /
-map("n", "<C-_>", "gcc", { noremap = false })
-map("v", "<C-_>", "gcc", { noremap = false })
+
+-- markdown preview shortcut
+map('n', '<leader>m', '<cmd>MarkdownPreview<cr>', opt)
 
 -- lsp 回调函数快捷键设置
 pluginKeys.mapLSP = function(mapbuf)
@@ -184,12 +184,6 @@ pluginKeys.mapLSP = function(mapbuf)
   -- mapbuf('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opt)
 end
 
--- typescript 快捷键
-pluginKeys.mapTsLSP = function(mapbuf)
-  mapbuf("n", "gs", ":TSLspOrganize<CR>", opt)
-  mapbuf("n", "gr", ":TSLspRenameFile<CR>", opt)
-  mapbuf("n", "gi", ":TSLspImportAll<CR>", opt)
-end
 
 -- nvim-cmp 自动补全
 pluginKeys.cmp = function(cmp)
@@ -203,9 +197,9 @@ pluginKeys.cmp = function(cmp)
 
   return {
     -- 上一个
-    ["<C-k>"] = cmp.mapping.select_prev_item(),
+    ["<C-k>"] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),
     -- 下一个
-    ["<C-j>"] = cmp.mapping.select_next_item(),
+    ["<C-j>"] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
     -- 出现补全
     ["<A-.>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
     -- 取消
@@ -292,10 +286,8 @@ pluginKeys.gitsigns_on_attach = function(bufnr)
   end, { expr = true })
 
   map({ "n", "v" }, "<leader>gs", ":Gitsigns stage_hunk<CR>")
-  map("n", "<leader>gS", gs.stage_buffer)
   map("n", "<leader>gu", gs.undo_stage_hunk)
   map({ "n", "v" }, "<leader>gr", ":Gitsigns reset_hunk<CR>")
-  map("n", "<leader>gR", gs.reset_buffer)
   map("n", "<leader>gp", gs.preview_hunk)
   map("n", "<leader>gb", function()
     gs.blame_line({ full = true })
@@ -304,11 +296,6 @@ pluginKeys.gitsigns_on_attach = function(bufnr)
   map("n", "<leader>gD", function()
     gs.diffthis("~")
   end)
-  -- toggle
-  map("n", "<leader>gtd", gs.toggle_deleted)
-  map("n", "<leader>gtb", gs.toggle_current_line_blame)
-  -- Text object
-  map({ "o", "x" }, "ig", ":<C-U>Gitsigns select_hunk<CR>")
 end
 
 return pluginKeys

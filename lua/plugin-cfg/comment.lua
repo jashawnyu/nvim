@@ -4,4 +4,4 @@ if not status then
   return
 end
 
--- comment.setup(require('keybindings').comment)
+comment.setup(require('keybindings').comment)

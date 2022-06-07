@@ -9,11 +9,10 @@ vim.g.dashboard_custom_section = {
         description = { '  Edit Projects         ' },
         command = 'edit ~/.local/share/nvim/project_nvim/project_history',
     },
-    -- e = { description = { "  Edit .bashrc          " }, command = "edit ~/.bashrc" },
-    -- f = { description = { "  Change colorscheme    " }, command = "ChangeColorScheme" },
-    -- g = { description = { "  Edit init.lua         " }, command = "edit ~/.config/nvim/init.lua" },
-    -- h = { description = {'  Find file          '}, command = 'Telescope find_files'},
-    -- i = { description = {'  Find text          '}, command = 'Telescope live_grep'},
+     e = { description = { "  Edit .zshrc          " }, command = "edit ~/.zshrc" },
+     g = { description = { "  Edit init.lua         " }, command = "edit ~/.config/nvim/init.lua" },
+     h = { description = {'  Find file          '}, command = 'Telescope find_files'},
+     i = { description = {'  Find text          '}, command = 'Telescope live_grep'},
 }
 
 vim.g.dashboard_custom_header = {
