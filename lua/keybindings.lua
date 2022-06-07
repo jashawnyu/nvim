@@ -18,8 +18,8 @@ local map = vim.api.nvim_set_keymap
 
 map("v", "Y", "\"+y", opt)
 -- 上下滚动浏览
-map("n", "<C-j>", "5j", opt)
-map("n", "<C-k>", "5k", opt)
+map("n", "J", "5j", opt)
+map("n", "K", "5k", opt)
 
 
 -- visual模式下缩进代码
