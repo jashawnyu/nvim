@@ -1,5 +1,8 @@
 vim.o.autochdir = true
+
 vim.o.wrap = true
+vim.cmd("syntax off")
+vim.cmd(" highlight LineNr ctermfg=black ")
 -- utf8
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = "utf-8"
@@ -59,8 +62,8 @@ vim.o.splitright = true
 -- 自动补全不自动选中
 vim.g.completeopt = "menu,menuone,noselect,noinsert"
 -- 样式
-vim.o.termguicolors = true
-vim.opt.termguicolors = true
+vim.o.termguicolors = false
+vim.opt.termguicolors = false
 
 -- 补全增强
 vim.o.wildmenu = true

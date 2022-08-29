@@ -1,7 +1,7 @@
 if vim.fn.has('macunix') then
 vim.g.vimwiki_list = {
   {
-    path = '~/Documents/Notes',
+    path = '/mnt/windows_share/Notes',
     syntax = 'markdown',
     ext = '.md',
     -- autogenerate diary index
@@ -11,7 +11,7 @@ vim.g.vimwiki_list = {
 else
 vim.g.vimwiki_list = {
   {
-    path = '~/Notes/',
+    path = '/mnt/windows_share/Notes',
     syntax = 'markdown',
     ext = '.md',
     -- autogenerate diary index
