@@ -15,7 +15,8 @@ vim.g.dashboard_custom_section = {
      i = { description = {'  Find text          '}, command = 'Telescope live_grep'},
 }
 
-vim.g.dashboard_custom_header = {
+local db = require('dashboard')
+db.custom_header = {
     [[          ▀████▀▄▄              ▄█ ]],
     [[            █▀    ▀▀▄▄▄▄▄    ▄▄▀▀█ ]],
     [[    ▄        █          ▀▀▀▀▄  ▄▀  ]],
@@ -27,5 +28,32 @@ vim.g.dashboard_custom_header = {
     [[   █   █  █      ▄▄           ▄▀   ]],
 }
 
+db.custom_center = {
+  {icon = '  ',
+  desc = 'Recently files  ',
+  action = "Telescope oldfiles"
+  },
+  {icon = '  ',
+  desc = 'Projects        ',
+  action = "Telescope projects"
+  },
+  {icon = '  ',
+  desc = 'Edit keybindings' ,
+  action = "edit ~/.config/nvim/lua/keybindings.lua"
+  },
+  {icon = '  ',
+  desc = 'Edit zshrc      ',
+  action = "edit ~/.zshrc"
+  },
+  {icon = '  ',
+  desc = 'Find file       ' ,
+  action = "Telescope find_files"
+  },
+  {icon = '  ',
+  desc = 'Find text       ' ,
+  action = "Telescope live_grep"
+  },
+}
 
 
+db.custom_footer = { 'https://github.com/jashawnyu/nvim' }

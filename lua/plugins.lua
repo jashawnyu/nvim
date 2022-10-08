@@ -37,6 +37,11 @@ packer.startup({
     -- Packer update itself
     use("wbthomason/packer.nvim")
     -------------------------- plugins -------------------------------------------
+    --Create key binding that stick, displays a popup with possible keybindings
+    --of the command you started typing.
+    use({
+      "folke/which-key.nvim"
+    })
     --markdown preview
     use({
       "iamcco/markdown-preview.nvim",
@@ -76,10 +81,10 @@ packer.startup({
    -- -- project
    -- use("ahmedkhalf/project.nvim")
    -- treesitter
-   -- use({
-   --   "nvim-treesitter/nvim-treesitter",
-   --   run = ":TSUpdate",
-   -- })
+    use({
+      "nvim-treesitter/nvim-treesitter",
+      run = ":TSUpdate",
+    })
    -- use("p00f/nvim-ts-rainbow")
    -- -- indent-blankline
    -- use("lukas-reineke/indent-blankline.nvim")

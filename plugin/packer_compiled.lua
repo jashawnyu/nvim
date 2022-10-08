@@ -184,6 +184,11 @@ _G.packer_plugins = {
     path = "/home/jashawnyu/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/jashawnyu/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/jashawnyu/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -228,6 +233,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jashawnyu/.local/share/nvim/site/pack/packer/start/vimwiki",
     url = "https://github.com/vimwiki/vimwiki"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/home/jashawnyu/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 

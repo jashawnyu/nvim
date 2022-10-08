@@ -13,9 +13,10 @@ local opt = {
   silent = true,
 }
 
-local map = vim.api.nvim_set_keymap        
+local map = vim.api.nvim_set_keymap
 
 
+-- visual mode copy
 map("v", "Y", "\"+y", opt)
 -- 上下滚动浏览
 map("n", "J", "5j", opt)
@@ -29,7 +30,6 @@ map("n", "K", "5k", opt)
 map("n", "Q", ":q<CR>", opt)
 map("n", "W", ":w<CR>", opt)
 
-
 ------------------------------------------------------------------
 -- windows 分屏快捷键
 ------------------------------------------------------------------
@@ -40,12 +40,12 @@ map("n", "sh", ":sp<CR>", opt)
 -- 关闭当前
 map("n", "sc", "<C-w>c", opt)
 -- 关闭其他
-map("n", "so", "<C-w>o", opt) -- close others
-
+map("n", "so", "<C-w>o", opt) 
 
 
 --------------------------------------------------------------------
 -- 插件快捷键
+------------------------------------------------------------------
 local pluginKeys = {}
 
 -- treesitter 折叠
@@ -53,9 +53,7 @@ map("n", "zz", ":foldclose<CR>", opt)
 map("n", "Z", ":foldopen<CR>", opt)
 
 -- nvim-tree
-map("n", "t", "", opt)
 map("n", "tt", ":NvimTreeToggle<CR>", opt)
--- map("n", "<leader>m", ":NvimTreeToggle<CR>", opt)
 -- 列表快捷键
 pluginKeys.nvimTreeList = { -- 打开文件或文件夹
   { key = { "<CR>", "o", "<2-LeftMouse>" }, action = "edit" },
@@ -132,6 +130,10 @@ pluginKeys.comment = {
 
 -- markdown preview shortcut
 map('n', '<leader>m', '<cmd>MarkdownPreview<cr>', opt)
+
+-- md-img-paste shortcut
+
+map('n', '<leader>p', '<cmd>call mdip#MarkdownClipboardImage()<cr>', opt)
 
 -- lsp 回调函数快捷键设置
 pluginKeys.mapLSP = function(mapbuf)
