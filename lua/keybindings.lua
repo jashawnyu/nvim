@@ -54,30 +54,7 @@ map("n", "Z", ":foldopen<CR>", opt)
 
 -- nvim-tree
 map("n", "tt", ":NvimTreeToggle<CR>", opt)
--- 列表快捷键
-pluginKeys.nvimTreeList = { -- 打开文件或文件夹
-  { key = { "<CR>", "o", "<2-LeftMouse>" }, action = "edit" },
-  -- 分屏打开文件
-  { key = "v", action = "vsplit" },
-  -- 显示隐藏文件
-  { key = "h", action = "split" },
-  -- Ignore (node_modules)
-  { key = "i", action = "toggle_ignored" },
-  -- Hide (dotfiles)
-  { key = ".", action = "toggle_dotfiles" },
-  -- 文件操作
-  { key = "<F5>", action = "refresh" },
-  { key = "a", action = "create" },
-  { key = "d", action = "remove" },
-  { key = "r", action = "rename" },
-  { key = "x", action = "cut" },
-  { key = "c", action = "copy" },
-  { key = "p", action = "paste" },
-  -- mac
-  { key = "s", action = "open" },
-  -- windows
-  -- { key = 's', action = 'system_open' },
-}
+
 -- bufferline
 -- 左右Tab切换
 map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)

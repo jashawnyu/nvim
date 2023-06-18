@@ -12,7 +12,7 @@ end
 local list_keys = require("keybindings").nvimTreeList
 
 nvim_tree.setup({
-  open_on_setup = false,
+  on_attach = on_attach,
   update_cwd = true,
   renderer = {
     icons = {
@@ -53,10 +53,6 @@ nvim_tree.setup({
     width = 30,
     side = "left",
     hide_root_folder = false,
-    mappings = {
-      custom_only = true,
-      list = list_keys,
-    },
     number = false,
     relativenumber = false,
     -- 显示图标
